@@ -15,15 +15,15 @@ fn main() {
     let vec = (0..10).map(|i| i * 3).collect();
     let now = Instant::now();
     read(vec, &tree);
-    println!("100 entries, read 10 of them {}", now.elapsed().as_micros());
+    println!("About 100 entries, read 10 of them in {}ms", now.elapsed().as_micros());
     insert(10000, 10, &tree);
     let vec = (0..10).map(|i| i * 10).collect();
     let now = Instant::now();
     read(vec, &tree);
-    println!("About 10k + 100 entries, read 10 of them {}", now.elapsed().as_micros());
+    println!("About 10k + 100 entries, read 10 of them in {}ms", now.elapsed().as_micros());
     insert(1000000, 100, &tree);
     let vec = (0..10).map(|i| i * 100).collect();
     let now = Instant::now();
     read(vec, &tree);
-    println!("About 1M + 10k + 100 entries, read 10 of them {}", now.elapsed().as_micros());
+    println!("About 1M + 10k + 100 entries, read 10 of them in {}ms", now.elapsed().as_micros());
 }
