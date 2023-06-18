@@ -12,7 +12,7 @@ The source code inserts 100 entries, measures time cost for reading 10 entries, 
 16-17ms for 10M + 10k + 100 entries
 ```
 
-Note that since sled saves part of the data on disk, it may become worse under actual workload. I've done the test many times to bring all data in cache on Linux.
+Note that since sled stores part of the data on disk, it may become worse under actual workload. I've done the test many times to bring all data in cache on Linux.
 
 ## Licence
 
