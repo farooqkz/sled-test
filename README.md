@@ -1,6 +1,6 @@
 # sled-test
 
-This is a simple Rust program to test how read cost(time) increases as the number of entries in a [sled](https://sled.rs) DB increases. Theoretically, since sled uses a [B-Tree](), as the number of entries increases, the read cost becomes logarithmically larger.
+This is a simple Rust program to test how read cost(time) increases as the number of entries in a [sled](https://sled.rs) DB increases. Theoretically, since sled uses a [B-Tree](https://en.wikipedia.org/wiki/B-tree), as the number of entries increases, the read cost becomes logarithmically larger.
 
 ## Tests
 
