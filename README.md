@@ -4,15 +4,16 @@ This is a simple Rust program to test how read cost(time) increases as the numbe
 
 ## Tests
 
-The source code inserts 100 entries, measures time cost for reading 10 entries, then adds 10k more, tests again and finally adds 1M and tests one last time. Results on my PC:
+This test inserts 100, 1k, 10k and 1M entries in four different trees and tries reading some written data(thus successful reads):
+
+I've done the test four times and I've saved data in a tmpfs rather than on disk.
 
 ```
-10ms for 100 entries
-11-12ms for 10k + 100 entries
-16-17ms for 10M + 10k + 100 entries
+392ns for 100 entries
+904ns for 1k entries
+724ns for 10k entries
+852ns for 1M entries
 ```
-
-Note that since sled stores part of the data on disk, it may become worse under actual workload. I've done the test many times to bring all data in cache on Linux.
 
 ## Licence
 
